@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body
+{
+    color: #808080;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #561234;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #123456;
+    border-radius: 10px;
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  @layer components {
+    
+     /* Print */
+
+     ._print-text-bold {
+        @apply
+        text-center font-bold
+     }
+
+     ._print-text-title {
+        @apply
+        w-[100%] bg-[lightgray] truncate text-center
+     }
+
+     ._print-text {
+        @apply
+        text-center truncate
+     }
+
+     ._print-text-left {
+        @apply
+        text-left truncate
+     }
+
+     ._print-text-120 {
+        @apply
+        w-[12rem] truncate text-center
+     }
+
+     ._print-text-mr {
+        @apply
+        text-center truncate mr-[1rem]
+     }
+}
